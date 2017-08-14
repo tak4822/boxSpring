@@ -1,0 +1,108 @@
+//==============================
+//         home
+//==============================
+.home-banner
+  @media (max-width: $lg-width)
+    display: flex
+    flex-direction: column
+
+  #canvas
+    @include grid-column(2)
+    height: calc(100vh - 100px)
+    @media (max-width: $lg-width)
+      @include grid-column(4)
+      order: 2
+
+  .banner-text
+    @include grid-column(2)
+    @media (max-width: $lg-width)
+      @include grid-column(4)
+      order: 1
+
+
+    h1
+      margin: 13vh 0 20px
+      @media (max-width: $lg-width)
+        margin-top: 150px
+      @media (max-width: $phone-width)
+        margin-top: 30px
+    h2
+      margin-bottom: 35px
+
+    .line-from-banner
+      position: relative
+      top: 4vh
+      height: 30vh
+      width: 1
+      border-left: solid 1px $text-color
+      @media (max-width: $lg-width)
+        display: none
+
+      .bit-line
+        position: absolute
+        width: 7px
+        height: 7px
+        background: $text-color
+
+      .up
+        top: -5px
+        left: -5px
+
+      .down
+        bottom: -5px
+        left: -5px
+
+.home-about
+  margin-top: 200px
+
+.home-work
+  margin-top: 200px
+  @media (max-width: $sm-width)
+    margin-top: 80px
+
+  .home-work-middle
+    .home-work-list
+      margin-top: 10px
+
+  .list
+    display: flex
+    align-items: center
+
+    &:before
+      content: " "
+      width: 5px
+      height: 5px
+      background: $head-color
+      display: inline-block
+      margin-right: 10px
+
+  .for-mobile
+    font-size: 0.9rem
+    line-height: 1.4em
+    .home-work-list-mobile
+      display: inline-block
+
+
+
+  .extra-margin-verti
+    margin: 30px 0 46px
+
+    @media (max-width: $sm-width)
+      margin: 30px 0 0
+
+      h1
+        margin: 0
+
+      .line-from-banner
+        display: none
+
+  .home-about
+    margin-top: 50px
+
+@media (max-width: $sm-width)
+  .home-banner
+    .canvas
+      height: 300px
+
+  .home-about-img-2, .home-work-middle,.home-work-img-4,.home-work-img-3
+    display: none

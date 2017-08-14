@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="15592.477 7724.014 28.523 29.986">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-3 {
+        stroke: #183f4d;
+      }
+
+      .cls-2 {
+        fill: #183f4d;
+      }
+
+      .cls-3, .cls-5 {
+        fill: none;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="グループ化_401" data-name="グループ化 401" transform="translate(14736.476 6910.014)">
+    <g id="長方形_708" data-name="長方形 708" class="cls-1" transform="translate(856 820.948)">
+      <rect class="cls-4" width="28.524" height="23.038"/>
+      <rect class="cls-5" x="0.5" y="0.5" width="27.524" height="22.038"/>
+    </g>
+    <rect id="長方形_713" data-name="長方形 713" class="cls-2" width="4.754" height="4.754" transform="translate(858.56 831.187)"/>
+    <rect id="長方形_717" data-name="長方形 717" class="cls-2" width="4.754" height="4.754" transform="translate(858.56 837.038)"/>
+    <rect id="長方形_710" data-name="長方形 710" class="cls-2" width="4.754" height="4.754" transform="translate(864.777 825.336)"/>
+    <rect id="長方形_721" data-name="長方形 721" class="cls-2" width="28.524" height="4.754" transform="translate(856 814)"/>
+    <rect id="長方形_715" data-name="長方形 715" class="cls-2" width="4.754" height="4.754" transform="translate(864.777 831.187)"/>
+    <rect id="長方形_719" data-name="長方形 719" class="cls-2" width="4.754" height="4.754" transform="translate(864.777 837.038)"/>
+    <rect id="長方形_711" data-name="長方形 711" class="cls-2" width="4.754" height="4.754" transform="translate(870.993 825.336)"/>
+    <rect id="長方形_714" data-name="長方形 714" class="cls-2" width="4.754" height="4.754" transform="translate(870.993 831.187)"/>
+    <rect id="長方形_718" data-name="長方形 718" class="cls-2" width="4.754" height="4.754" transform="translate(870.993 837.038)"/>
+    <g id="長方形_712" data-name="長方形 712" class="cls-3" transform="translate(877.21 825.336)">
+      <rect class="cls-4" width="4.754" height="4.754"/>
+      <rect class="cls-5" x="0.5" y="0.5" width="3.754" height="3.754"/>
+    </g>
+    <g id="長方形_716" data-name="長方形 716" class="cls-3" transform="translate(877.21 831.187)">
+      <rect class="cls-4" width="4.754" height="4.754"/>
+      <rect class="cls-5" x="0.5" y="0.5" width="3.754" height="3.754"/>
+    </g>
+    <g id="長方形_720" data-name="長方形 720" class="cls-3" transform="translate(877.21 837.038)">
+      <rect class="cls-4" width="4.754" height="4.754"/>
+      <rect class="cls-5" x="0.5" y="0.5" width="3.754" height="3.754"/>
+    </g>
+  </g>
+</svg>

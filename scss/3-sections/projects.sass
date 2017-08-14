@@ -1,0 +1,117 @@
+//==============================
+//         project
+//==============================
+.ajust-margin-projects
+  margin-top: 150px
+
+.projects-section
+  height: 1500px
+  position: relative
+
+  .flex-column-tablet
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+
+    .fix-inner-left-col
+      width: calc(33.33% - 8px)
+      display: inline-block
+    .fix-inner-middle-col
+      width: calc(66.66% - 8px)
+      display: inline-block
+      margin-left: 16px
+    @media (max-width: $lg-width)
+      flex-direction: column
+      .fix-inner-left-col
+        margin-top: 30px
+        width: 100%
+        order: 2
+        @media (max-width: $phone-width)
+          margin-top: 10px
+        .left-description
+          margin-top: -30px
+          @media (max-width: $phone-width)
+            margin-top: -15px
+      .fix-inner-middle-col
+        width: 100%
+        margin-left: 0
+        order: 1
+
+    .left-description
+      margin-bottom: 20px
+
+    .projects-box
+      width: 100%
+      height: auto
+
+  .logo-box
+    width: 200px
+    height: 200px
+    border: 1px solid $head-color
+    margin: 10px auto
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: all 0.5s ease-in-out
+    @media (max-width: $sm-width)
+      width: 100px
+      height: 100px
+      @media (max-width: $phone-width)
+        width: 50px
+        height: 50px
+
+
+    img
+      width: 80%
+
+  //link line object
+  .linkline-wrap
+    position: absolute
+    top: 60px
+    margin-left: 69vw
+    width: 15vw
+    height: 10px
+    @media (max-width: $phone-width)
+      top: 30px
+
+    .linkline-line
+      position: relative
+      width: 100%
+      height: 100%
+      border-top: 3px solid $primary-color
+      @media (max-width: $phone-width)
+        border-top: 2px solid $primary-color
+    .linkline-bit
+      position: absolute
+      top: -6px
+      width: 15px
+      height: 15px
+      background: $primary-color
+      @media (max-width: $phone-width)
+        top: -3px
+        width: 8px
+        height: 8px
+
+    .linkline-bit-left
+      left: 0
+
+    .linkline-bit-right
+      right: 0
+
+  //adding classes
+  // for projects page
+  .fix-col
+    position: fixed
+    top: 100px
+
+  .fix-linkline
+    position: fixed
+    top: 160px
+    @media (max-width: $phone-width)
+      top: 130px
+
+  .fix-bottom
+    position: absolute
+    bottom: 150px
+
+//fortablet

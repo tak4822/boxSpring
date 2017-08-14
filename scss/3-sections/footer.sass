@@ -1,0 +1,161 @@
+//==============================
+//          footer
+//==============================
+footer
+  position: relative
+  margin-top: 150px
+  padding-top: 20px
+  padding-bottom: 10px
+  +clearfix
+
+  .footer-line
+    position: absolute
+    top: 0
+    left: 24px
+    border: solid 1px $text-color
+    width: calc(100% - 51px)
+
+  .footer-bit
+    position: absolute
+    top: -4px
+    width: 9px
+    height: 9px
+    background: $text-color
+
+  .deco-right
+    right: 16px
+
+  .deco-left
+    left: 16px
+
+  .footer-info
+    float: left
+    display: flex
+    flex-wrap: nowrap
+    align-items: center
+    margin-left: 16px
+
+    .tel, .email
+      display: inline-block
+      border-bottom: 1px solid $text-color
+      line-height: 1.6em
+
+      &:hover
+        border-bottom: 1px solid $section-color
+
+    .email
+      margin-left: 30px
+
+    .address
+      display: inline-block
+      margin-left: 30px
+      margin-bottom: 0
+      padding-top: 0.8em
+
+  .footer-right
+    @include grid-push(3)
+    padding-top: 20px
+
+    .social-icons
+      margin: 0
+      padding: 0
+      list-style: none
+      +clearfix
+
+      li
+        float: left
+        &:not(:last-child)
+          margin-right: 10px
+
+
+
+
+        a
+          height: 40px
+          width: 40px
+          display: inline-block
+          transform: perspective(1000)
+          transform-style: preserve-3d
+          transition: all 0.4s ease
+          background:
+              image: url("../img/social.png")
+              repeat: no-repeat
+
+          &:hover
+            transform: rotate(-90deg)
+
+        .behance
+          background-position: 0 0
+          &:hover
+            background-position: 0 -40px
+
+        .instagram
+          background-position: -50px 0
+          &:hover
+            background-position: -50px -40px
+
+        .pinterest
+          background-position: -100px 0
+          &:hover
+            background-position: -100px -40px
+
+        .twitter
+          background-position: -150px 0
+          &:hover
+            background-position: -150px -40px
+
+    .copyr
+      font-size: 0.8rem
+      margin-top: 10px
+
+  @media (max-width: $lg-width)
+    .footer-right
+      margin-left: calc(66% + 8px)
+      .social-icons
+        li
+          a
+            height: 27px
+            width: 27px
+            background:
+              image: url("../img/social-sm.png")
+
+          .behance
+            background-position: 0 0
+
+          .instagram
+            background-position: -37px 0
+
+          .pinterest
+            background-position: -74px 0
+
+          .twitter
+            background-position: -111px 0
+
+      .copyr
+        font-size: 0.5rem
+        margin-top: 5px
+
+@media (max-width: $sm-width)
+  footer
+    margin-top: 50px
+    .footer-info
+      @include grid-column(2)
+      flex-wrap: wrap
+      flex-direction: column
+      align-items: flex-start
+
+      .tel, .email, .address
+        display: block
+        margin: 0 0 10px
+
+    .footer-right
+      @include grid-column(2)
+      padding: 0
+
+@media (max-width: 330px)
+  footer
+    .footer-info,.footer-right
+      @include grid-column(4)
+
+    .footer-right
+      margin-top: 10px

@@ -1,0 +1,70 @@
+include parts/btn
+mixin testimonial(logoHref,content,name,company,detailNum)
+  .tes-each-wrap.each-items.rotate-pre
+    .tes-inner-wrap
+      .tes-logo-wrap
+        img(src=logoHref,alt="our previous company's logo")
+      p.tes-content #{content}
+      .tes-from
+        p.tes-name #{name}
+        i.tes-company #{company}
+      .tes-btn
+        +btn(detailNum,"See Details")
+doctype html
+html(lang="en")
+  head
+    title BoxSpring
+    meta(charset="utf-8")
+    meta(name="viewport", content="with=device--width, initial-scale=1")
+    
+    
+    //font from TypeKit
+    script(src="https://use.typekit.net/czx4kof.js")
+    script try{Typekit.load({ async: true });}catch(e){}
+    
+    //google fonts
+    link(href="https://fonts.googleapis.com/css?family=Slabo+13px", rel="stylesheet")
+    
+    link(rel="stylesheet", href="css/main.css")
+    
+  body
+    .overlay
+    include parts/header
+    .wrapper
+      .row.subnav-mobile
+        h3 About
+        .sub-nav
+          .sub-nav-box
+            a(href="whoWeAre.html").sub-nav-text Who We Are         
+          .sub-nav-box
+            a(href="team.html").sub-nav-text Team
+          .sub-nav-box.active-line
+            .active-bit-left
+            .active-bit-right
+            a(href="testimonials.html").sub-nav-text Testimonials
+                  
+      section.tes-sec
+        .tes-left
+          .slide-tes-left.slide-pre
+            p.tes-left-text 80% of our new projects come from our customer’s recommendations
+        .tes-right
+          .row
+            +testimonial("img/edmund_logo.jpg","“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet blandit nisl, vel elementum sem. Duis dapibus maximus felis, eu sagittis neque lobortis non. Sed ornare consequat porttitor. Morbi sit amet blandit nisl, vel elementum sem. Duis dapibus maximus felis, eu sagittis neque lobortis non. ”","Vasily Goryunov, Manager","Francesco","detail_1.html")
+          
+            +testimonial("img/edmund_logo.jpg","“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet blandit nisl, vel elementum sem. Duis dapibus maximus felis, eu sagittis neque lobortis non. Sed ornare consequat porttitor. ”","Vasily Goryunov, Manager","Francesco","detail_1.html")
+            
+            +testimonial("img/edmund_logo.jpg","“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet blandit nisl, vel elementum sem. Duis dapibus maximus felis, eu sagittis neque lobortis non. Sed ornare consequat porttitor.eu sagittis neque lobortis non. Sed ornare consequat porttitor. ”","Vasily Goryunov, Manager","Francesco","detail_1.html")
+          
+          .row.tes-bw-row
+            +testimonial("img/edmund_logo.jpg","“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet blandit nisl, vel elementum sem. Duis dapibus maximus felis, eu sagittis neque lobortis non. Sed ornare consequat porttitor. ”","Vasily Goryunov, Manager","Francesco","detail_1.html")
+          
+            +testimonial("img/edmund_logo.jpg","“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet blandit nisl, vel elementum sem. Duis dapibus maximus felis, eu sagittis neque lobortis non. Sed ornare consequat porttitor. Morbi sit amet blandit nisl, vel elementum sem. Duis dapibus maximus felis, eu sagittis neque lobortis non. ”","Vasily Goryunov, Manager","Francesco","detail_1.html")
+            
+            +testimonial("img/edmund_logo.jpg","“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet blandit nisl, vel elementum sem. Duis dapibus maximus felis, eu sagittis neque lobortis non. Sed ornare consequat porttitor. Morbi sit amet blandit nisl, vel elementum sem. Duis dapibus maximus felis, eu sagittis neque lobortis non. ”","Vasily Goryunov, Manager","Francesco","detail_1.html")
+            
+          
+      include parts/footer
+    script(src="http://code.jquery.com/jquery-3.2.1.min.js",integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=",crossorigin="anonymous")
+    script(src="js/main.js")
+    
+      

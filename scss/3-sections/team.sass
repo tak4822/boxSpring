@@ -1,0 +1,159 @@
+//==============================
+//          team
+//==============================
+.ajust-margin
+  margin-top: 150px
+  @media (max-width: $lg-width)
+    margin-top: 50px
+
+.team-head
+  +grid-push(1)
+  @media (max-width: $sm-width)
+    margin-left: 16px
+  .small-head
+    margin-bottom: 20px
+    @media (max-width: $sm-width)
+      margin-top: 50px
+  h4
+    margin: 0 0 40px
+
+.verti-line
+  position: relative
+  @include grid-column(2)
+  +grid-push(2)
+  height: 200px
+  border-left: 1px solid $primary-color
+  @media (max-width: $lg-width)
+    display: none
+
+  .verti-line-bit
+    position: absolute
+    left: -5px
+    width: 9px
+    height: 9px
+    background: $primary-color
+
+  .verti-up
+    top: -5px
+
+  .verti-down
+    bottom: -5px
+
+.team-section
+  +clearfix
+  margin-top: 300px
+  margin-bottom: 0
+  @media (max-width: $lg-width)
+    display: none
+
+  .team-left-col
+    position: relative
+    .team-comments
+      height: 100vh
+
+      .team-name
+        margin-bottom: 0
+
+      .left-description
+        margin-top: 60px
+
+    .team-cta
+      position: absolute
+      left: 25vw
+      bottom: 0
+      width: 200%
+
+      .btn-wrap
+        width: 100%
+
+      .for-big-btn
+        width: 100%
+        text-align: center
+
+
+  .team-right-col
+    position: absolute
+    top: 0
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+
+    .progress-line
+      width: 2px
+      height: 25vh
+      background: $muted-color
+      position: relative
+      top: -12.5vh
+
+      .progress-bit
+        position: absolute
+        left: -3px
+        width: 8px
+        height: 8px
+        background: $muted-color
+
+      .progress-1
+        top: 0
+
+      .progress-2
+        top: 25%
+
+      .progress-3
+        top: 50%
+
+      .progress-4
+        top: 75%
+
+      .progress-5
+        top: 100%
+
+      .progress-active
+        transform: scale(2)
+        background: $primary-color
+
+  //for team page
+  .fix-team-top
+    position: fixed
+    top: 100px
+
+  .fix-team-bottom
+    position: absolute
+    top: 400vh
+
+  //animation when image is changed
+  .change-img
+    transform: rotateX(360deg)
+    transition: transform 1s ease-in-out
+
+.team-sec-for-sm
+  display: none
+  @media (max-width: $lg-width)
+    display: block
+    margin-top: 100px
+    .team-for-sm
+      margin-bottom: 150px
+      .team-name
+        margin-left: 16px
+      .role-para
+        margin-left: 16px
+        margin-top: -20px
+        margin-bottom: 30px
+      .team-pic-for-sm
+        @include grid-column(3)
+        @media (max-width: $sm-width)
+          @include grid-column(4)
+      .team-description
+        @include grid-column(1)
+        @media (max-width: $sm-width)
+          @include grid-column(4)
+
+    .team-cta
+      margin-top: 50px
+      width: 100%
+      text-align: center
+      .btn-wrap
+        width: 100%
+        .btn
+          @include grid-column(2)
+          +grid-push(1)

@@ -1,0 +1,189 @@
+//==============================
+//            base
+//==============================
+body
+  position: relative
+  overflow: auto
+  //@include grid-visual
+p
+  margin: 0
+
+section
+  +clearfix
+
+.wrapper
+  position: relative
+  width: 100%
+  height: 100%
+  transition: all .5s ease
+  z-index: 2
+
+a
+  text-decoration: none
+  display: block
+  color: $text-color
+
+  &:hover
+    color: $section-color
+
+.sec-head
+  margin: 0 auto
+  padding-left: 16px
+
+.left-text-with-title
+  margin: 0 0 30px
+
+img
+  width: 100%
+  height: auto
+
+p:first-of-type
+  margin-top: 0
+
+p:not(:first-of-type)
+  margin-top: 16px
+
+h3
+  margin-top: 50px
+  margin-bottom: 120px
+  display: inline
+  line-height: 1.15em
+  +clearfix
+  @media (max-width: $lg-width)
+      margin-bottom: 80px
+
+h5
+  margin: 0 0 40px
+  @media (max-width: $lg-width)
+    margin: 0 0 10px
+
+h6
+  margin: 0 0 30px
+  @media (max-width: $sm-width)
+    margin-bottom: 10px
+
+
+//when header is fixed
+.header-fix
+  position: fixed
+  top: 0
+
+//----------side bar-------------------
+//when side-nav is opened
+.side-open
+  .header-fix
+    z-index: 2
+
+.overlay
+  content: ''
+  visibility: hidden
+  position: fixed
+  top: 0
+  left: 0
+  display: block
+  width: 100%
+  height: 100%
+  background: rgba(0,0,0,0)
+  transition: all .5s ease
+  z-index: 3
+
+//------team, project page----------
+//fix section layout
+.fix-section
+  position: relative
+
+  //left section
+  .fix-left-col
+    position:absolute
+    top: 0
+    width: calc(25vw - 20px)
+    margin-left: 16px
+
+  //middle section
+  .fix-middle-col
+    position: absolute
+    top: 0
+    width: calc(50vw - 24px)
+    margin-left: calc(25vw + 12px)
+
+  .fix-left-middle
+    position:absolute
+    top: 0
+    width: calc(75vw - 24px)
+    margin-left: 16px
+  //right section
+  .fix-right-col
+    position: absolute
+    top: 0
+    margin-left: calc(75vw + 4px)
+    width: calc(25vw - 20px)
+
+//--------sub nav------------
+.sub-nav
+  margin-top: 50px
+  margin-left: 40px
+
+  height: 6.8rem
+  height: 9.2vw
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+  .sub-nav-box
+    position: relative
+    padding: 0 15px 0 15px
+
+    .sub-nav-text
+      font-size: 1.8vw
+      line-height: 1
+      display: inline
+
+    .active-bit-left
+      position: absolute
+      top: 50%
+      left: 0
+      margin-top: -3px
+      width: 7px
+      height: 7px
+      background: $primary-color
+
+    .active-bit-right
+      position: absolute
+      top: 50%
+      right: 0
+      margin-top: -3px
+      width: 7px
+      height: 7px
+      background: $primary-color
+
+  .active-line
+    &:after
+      position: absolute
+      padding-left: 100%
+      top: 50%
+      left: 0
+      content: ""
+      border-top: 1px solid $primary-color
+
+.row.subnav-mobile
+  @media (max-width: $sm-width)
+    flex-direction: column
+
+    h3
+      margin-bottom: 20px
+      line-height: 0.5em
+
+    .sub-nav
+      flex-direction: row
+      justify-content: flex-start
+      margin-bottom: 0
+      margin-top: 0
+      padding-left: -15px
+      @include grid-push(1)
+      height: auto
+      @media (max-width: $phone-width)
+        flex-direction: column
+        width: 8.5rem
+
+      .sub-nav-text
+        font-size: 1.2rem

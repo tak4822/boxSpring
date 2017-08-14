@@ -1,0 +1,117 @@
+include  parts/btn
+doctype html
+html(lang="en")
+  head
+    title BoxSpring
+    meta(charset="utf-8")
+    meta(name="viewport", content="with=device--width, initial-scale=1")
+    //font from TypeKit
+    script(src="https://use.typekit.net/czx4kof.js")
+    script try{Typekit.load({ async: true });}catch(e){}
+    //google fonts
+    link(href="https://fonts.googleapis.com/css?family=Slabo+13px", rel="stylesheet")
+    
+    link(rel="stylesheet", href="css/jquery-ui.css")
+    link(rel="stylesheet", href="css/jquery-ui.structure.css")
+    link(rel="stylesheet", href="css/main.css")
+    
+  body
+    .overlay
+    include parts/header
+    .wrapper
+      .row
+        h3 Contact   
+      section.contact-sec  
+        .row.contact-row
+          .contact-left.contact-left-for-sm
+            p.contact-left-text Feel free to get in touch with us. It would be great even if you haven’t see through your project. We are happy to help you from zero.
+          
+          .contact-quote
+            p.quote-title Free Quote
+            .contact-field
+              labele(for="nameId").contact-label Name
+                span.contact-label-small (required)
+              input(type="text",id="nameId",name="name",placeholder="What is your Name?").contact-input
+            .contact-field
+              labele(for="emailId").contact-label Email
+               span.contact-label-small (required)
+              input(type="email",id="emailId",name="email",placeholder="What is your Email address?").contact-input
+            .contact-field.contact-input-half-wrap
+              .contact-input-half  
+                p.contact-label Type of your project
+                .check-wrap
+                  input(type="checkbox",id="brand",class="contact-check",value="brand",name="type[]")
+                  label(for="brand").check-label Brand Strategy
+                .check-wrap
+                  input(type="checkbox",id="web",class="contact-check",value="web",name="type[]")
+                  label(for="web").check-label Web Development & Dsign
+                .check-wrap
+                  input(type="checkbox",id="graphic",class="contact-check",value="graphic",name="type[]")
+                  label(for="graphic").check-label Graphic Design
+                .check-wrap
+                  input(type="checkbox",id="interior",class="contact-check",value="interior",name="type[]")
+                  label(for="interior").check-label Interior Design
+                .check-wrap
+                  input(type="checkbox",id="others",class="contact-check",value="others",name="type[]")
+                  label(for="others").check-label Others
+              .contact-input-half
+                .contact-field
+                  labele.contact-label Estimated Budjet
+                  .select-wrap
+                    select(id="bujetId",name="budjet").contact-input.select-box
+                      option(value="---") ---
+                      option(value="under1") < $1000
+                      option(value="1-5") $1000 - $5000
+                      option(value="5-10") $5000 - $10,000
+                      option(value="over10") $10,000+
+                .contact-field
+                  labele(for="datepicker").contact-label Timeline
+                  .timeline-wrap
+                    input(type="text",id="datepicker",name="timeline",placeholder="Have time limit?").contact-input.timeline
+                  
+            .contact-field
+              labele(for="messageId").contact-label Description of your project
+              textarea(id="messageId",class="contact-input message ",name="message",placeholder="Would you tell me your plan")
+            .contact-field.contact-btn
+              .btn-wrap
+                a(href="").btn.default-btn
+                  .bit.left-up
+                  .bit.right-up
+                  .bit.right-bottom
+                  .bit.left-bottom
+                  .btn-text.default-btn-text GET IN TOUCH
+                a(href="").btn.active-btn
+                  .bit.left-up
+                  .bit.right-up
+                  .bit.right-bottom
+                  .bit.left-bottom
+                  .btn-text.active-btn-text GET IN TOUCH
+          
+          .contact-right.for-desktop
+            .contact-right-tel
+              p.contact-right-head Tell
+              a(href="tel:123456789").contact-tel-email +1.123.456.789
+            .contact-right-email
+              p.contact-right-head Email
+              a(href="mailto:box_spring@gmail.com").contact-tel-email box_spring@gmail.com
+          
+      section.contact-sec
+        .row.contact-row
+          .contact-left
+            p.contact-left-text We are super movable. We would like to help you wherever you are especially in east coast.
+          .address-map
+            #google-map
+          .contact-right.for-desktop
+            p.contact-right-head Address
+            p.contact-tel-email 570 Dunsmuir St #600, Vancouver,BC, V6B 1Y1
+
+      include parts/footer
+      
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqyO8GV2sUZV7pncvSAY70esw_UFBhXWg&callback=initMap",async,defer)
+    script(src="js/googlemap.js")
+    script(src="http://code.jquery.com/jquery-3.2.1.min.js",integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=",crossorigin="anonymous")
+    script(src="js/jquery-ui.js")
+    script(src="js/main.js")
+    script(src="js/contact.js")
+    
+      

@@ -1,0 +1,56 @@
+//==============================
+//        who we are
+//==============================
+
+.who-section
+  margin-bottom: 200px
+  +clearfix
+  @media (max-width: $sm-width)
+    margin-top: 100px
+
+    .mobile-margin
+      margin-bottom: 30px
+
+  .specializing
+    +clearfix
+
+  .experienced
+    +clearfix
+
+    .value-testim
+      .testim-words
+        margin: 0 10% 0 10%
+
+      .testim-name
+        font-weight: 500
+        margin: 12px 10% 0 10%
+
+      .testim-place
+        margin: -12px 0 0 10%
+
+    .row.mobile-harriot
+      @media (max-width: $sm-width)
+        flex-direction: column
+
+        .value-img-9
+          order: 1
+        .harriot-quote
+          order: 2
+
+      .harriot-name
+        font-size: 2.5rem
+        margin: 0 0 8%
+        @media (max-width: $sm-width)
+          margin: 0 0 10px
+
+.history-img-1
+  @media (max-width: $sm-width)
+    padding-left: 8px
+
+.history-img-1
+  @media (max-width: $sm-width)
+    padding-right: 8px
+
+@media (max-width: $sm-width)
+  .value-img-2,.value-img-3,.value-img-4,.value-img-5,.value-img-6,.value-img-7,.value-img-8,.value-testim,.history-text-1,.history-img-3,.history-text-2
+    display: none

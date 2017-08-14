@@ -1,0 +1,61 @@
+include  parts/btn
+doctype html
+html(lang="en")
+  head
+    title Projects.BoxSpring
+    meta(charset="utf-8")
+    meta(name="viewport", content="with=device--width, initial-scale=1")
+    
+    //font from TypeKit
+    script(src="https://use.typekit.net/czx4kof.js")
+    script try{Typekit.load({ async: true });}catch(e){}
+    
+    //google fonts
+    link(href="https://fonts.googleapis.com/css?family=Slabo+13px", rel="stylesheet")
+    
+    link(rel="stylesheet", href="css/main.css")
+    
+    
+    
+  body.fixed-header
+    .overlay
+    
+    include parts/header
+    .wrapper
+      .row.sp-row
+        h3 Projects
+      section.projects-section.fix-section
+        .flex-column-tablet.fix-left-middle
+          .fix-inner-left-col#description
+            h5.project-name#showTitle Edmund oast
+            p.left-description#showDesc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia purus a porta vestibulum. Maecenas et neque auctor arcu dictum venenatis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin rutrum, sapien et facilisis ornare.
+            +btn("detail_1.html","See detail")
+          .fix-inner-middle-col.projects-image
+              img(src="img/edmund_hero.jpg").projects-box#show-box
+        .fix-right-col
+          div(data-src="img/edmund_hero.jpg",data-title="Edmund oast",data-contents="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia purus a porta vestibulum. Maecenas et neque auctor arcu dictum venenatis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin rutrum, sapien et facilisis ornare.",data-href="detail_1.html").logo-box.logo1  
+            img(src="img/edmund_logo.jpg",alt="poject,logo")
+          
+          div(data-src="img/alma_hero.jpg",data-title="ALMa",data-contents="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia purus a porta vestibulum. Maecenas et neque auctor arcu dictum venenatis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin rutrum, sapien et facilisis ornare.",data-href="").logo-box.logo2
+            img(src="img/alma_logo.jpg",alt="poject,logo")
+          
+          div(data-src="img/public_hero.jpg",data-title="Public Cafe",data-contents="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia purus a porta vestibulum. Maecenas et neque auctor arcu dictum venenatis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin rutrum, sapien et facilisis ornare.",data-href="").logo-box.logo3
+            img(src="img/public_logo.jpg",alt="poject,logo")
+          
+          div(data-src="img/bella_hero.jpg",data-title="Bella",data-contents="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia purus a porta vestibulum. Maecenas et neque auctor arcu dictum venenatis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin rutrum, sapien et facilisis ornare.",data-href="").logo-box.logo4
+            img(src="img/bella_logo.jpg",alt="poject,logo")
+          .logo-box.logo5
+          .logo-box.logo6
+        .linkline-wrap
+          .linkline-line
+          .linkline-bit.linkline-bit-left
+          .linkline-bit.linkline-bit-right
+        
+      
+      include parts/footer
+    
+    script(src="http://code.jquery.com/jquery-3.2.1.min.js",integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=",crossorigin="anonymous")
+    script(src="js/main.js")
+    script(src="js/projects.js")
+    
+      

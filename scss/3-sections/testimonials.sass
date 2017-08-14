@@ -1,0 +1,107 @@
+//==============================
+//        testimonials
+//==============================
+.tes-sec
+  .tes-left
+    +clearfix
+    @include grid-column(1)
+    position: relative
+
+    @media (max-width: $lg-width)
+      @include grid-column(3)
+      +grid-push(1)
+
+      .tes-left-text
+        margin-bottom: 200px
+        margin-top: -50px
+        @media (max-width: $sm-width)
+          margin-top: 20px
+          margin-bottom: 50px
+
+  .tes-right
+    +clearfix
+    @include grid-column(3)
+    @media (max-width: $lg-width)
+      @include grid-column(4)
+    .tes-bw-row
+      margin-top: 100px
+
+    .tes-each-wrap
+      width: calc(33.33% - 8px)
+      display: inline-block
+      .tes-inner-wrap
+        padding: 0 0.8em
+
+        .tes-logo-wrap
+          height: 50px
+          width: 100%
+          margin-bottom: 30px
+          text-align: center
+          @media (max-width: $lg-width)
+            margin-bottom: 15px
+
+          img
+            width: 80%
+            margin: auto
+
+        .tes-from
+          margin-top: 25px
+          margin-bottom: 10px
+          .tes-name
+          .tes-company
+            display: block
+
+        //testimonial button
+        @media (min-width: 600px)
+          .tes-btn
+            .btn
+              height: 2.5rem
+
+              .btn-text
+                padding-top: 0.7rem
+                padding-left: 20px
+                padding-right: 20px
+                font-size: 1.2rem
+
+              .bit
+                position: absolute
+                width: 7px
+                height: 7px
+                background: $primary-color
+
+              .left-up
+                left: -4px
+                top: -4px
+
+              .right-up
+                right: -4px
+                top: -4px
+
+              .right-bottom
+                right: -4px
+                bottom: -4px
+
+              .left-bottom
+                left: -4px
+                bottom: -4px
+            .default-btn
+              transform: translateZ(20)
+
+            .active-btn
+              transform: rotateX(90deg) translateZ(65px)
+
+@media (max-width: 600px)
+  .tes-sec
+    .tes-left
+      margin-top: 40px
+      margin-left: 0
+      @include grid-column(4)
+
+    .tes-right
+      .row
+        flex-direction: column
+        .tes-each-wrap
+          width: 100%
+          margin-top: 100px
+          .tes-logo-wrap
+            margin-bottom: 50px

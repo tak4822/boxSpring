@@ -1,0 +1,68 @@
+//==============================
+//            detail
+//==============================
+.detail-sec
+  margin-bottom: 200px
+
+.detail-title-wrap
+  flex-wrap: wrap
+  flex-direction: column
+
+  .detail-h3
+    margin-top: 150px
+    line-height: 1em
+    margin-bottom: 0
+    @media (max-width: $sm-width)
+      margin-top: 100px
+  .detail-title
+    margin-bottom: 8rem
+    @media (max-width: $sm-width)
+      margin-bottom: 4rem
+
+.detail-hero
+  @include grid-column(4)
+  height: auto
+
+.detail-head
+  padding-top: 150px
+  margin-bottom: 150px
+  @include grid-column(3)
+  +grid-push(1)
+  @media (max-width: $lg-width)
+    padding-top: 50px
+    margin-bottom: 50px
+
+.detail-section-head
+  margin-bottom: 40px
+  @media (max-width: $phone-width)
+    margin-bottom: 0
+.detail-section-left-text
+  @media (max-width: $lg-width)
+    margin-bottom: 10px
+
+
+.detail-btn
+  margin-top: 100px
+  @media (max-width: $lg-width)
+    margin: auto
+  .btn-wrap
+    width: 100%
+    .btn
+      height: 4rem
+      .btn-text
+        font-size: 1.9rem
+        padding-top: 1.4rem
+
+    .default-btn
+      transform: translateZ(40px)
+
+      .default-btn-text
+        color: $primary-color
+
+    .active-btn
+      background: $primary-color
+      transform: rotateX(90deg) translateZ(100px)
+
+.top-space-mobile
+  @media (max-width: $sm-width)
+    margin-top: 20px

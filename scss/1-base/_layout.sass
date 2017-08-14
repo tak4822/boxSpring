@@ -1,0 +1,95 @@
+//==============================
+//          layout
+//==============================
+
+.row
+  display: flex
+  margin-top: 16px
+  +clearfix
+
+//for fix col, get rid of margin top 16px in row
+.sp-row
+  margin-top: 0
+
+.left-col
+  @include grid-column(1)
+  padding-top: 16px
+
+.right-col
+  @include grid-column(3)
+
+@media (max-width: $lg-width)
+  .left-col,.right-col
+    @include grid-column(4)
+    +clearfix
+
+.sec-head
+  @include grid-column(2)
+  +grid-push(2)
+  @media (max-width: $sm-width)
+    margin-left: 0
+
+h3,.detail-title
+  +grid-push(1)
+
+
+//1
+#inside-grid-1,
+.home-about-img-2,.home-work-middle, .home-work-img-3, .brand-img-1, .web-text, .graphic-img-1, .graphic-img-2, .graphic-img-4, .graphic-text, .interior-img-2, .value-img-2, .value-img-3, .value-img-4, .value-img-5, .value-img-6, .value-img-7, .value-img-8, .value-testim, .harriot-quote, .history-img-1, .history-img-2, .history-text-1, .history-img-3, .history-text-2,.detail-img-2,.detail-img-3,.detail-img-5,.detail-2-text,.detail-img-7
+  width: calc(33.33% - 8px)
+  display: inline-block
+  @media (max-width: $sm-width)
+      width: 100%
+
+//2
+#inside-grid-2,
+.home-about-img-1, .home-about-text, .home-work-img-2, .home-work-text,.home-work-img-4,.brand-video, .web-img-1, .web-img-2, .graphic-img-3, .interior-middle, .value-img-1, .value-text, .value-img-9, .history-img-4,.detail-1-text,.detail-img-4,.detail-img-6,.detail-2-text-2,.detail-btn
+   width: calc(66.66% - 8px)
+   display: inline-block
+   @media (max-width: $sm-width)
+       width: 100%
+
+#inside-grid-3,.detail-img-1
+  width: 100%
+  display: inline-block
+
+
+.align-flex-end
+  @media (min-width: #{$sm-width} + 1px)
+    display: flex
+    align-items: flex-end
+
+.push-gutter
+  margin-left: 16px
+  @media (max-width: $sm-width)
+    margin-left: 0
+
+.push-1-grid
+  margin-left: calc(33.33% + 8px)
+  @media (max-width: $sm-width)
+    margin-left: 0
+
+.for-mobile
+  display: none
+  @media (max-width: $sm-width)
+    display: block
+    +clearfix
+    display: flex
+    flex-direction: row
+  .half-width
+    float: left
+    width: 50%
+    display: inline-block
+    &:nth-child(1)
+     padding-right: 8px
+
+    &:nth-child(2)
+     padding-left: 8px
+
+@media (max-width: $sm-width)
+  .for-desktop
+    display: none!important
+
+.flex-column-mobile
+  @media (max-width: $sm-width)
+    flex-direction: column

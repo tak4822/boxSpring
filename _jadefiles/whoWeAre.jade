@@ -1,0 +1,139 @@
+include  parts/btn
+doctype html
+html(lang="en")
+  head
+    title WhoWeAre.BoxSpring
+    meta(charset="utf-8")
+    meta(name="viewport", content="with=device--width, initial-scale=1")
+    
+    //font from TypeKit
+    script(src="https://use.typekit.net/czx4kof.js")
+    script try{Typekit.load({ async: true });}catch(e){}
+    
+    //google fonts
+    link(href="https://fonts.googleapis.com/css?family=Slabo+13px", rel="stylesheet")
+    
+    link(rel="stylesheet", href="css/main.css")
+    
+  body
+    .overlay
+    include parts/header
+    .wrapper
+      .row.subnav-mobile
+        h3 About
+        .sub-nav
+          .sub-nav-box.active-line
+            .active-bit-left
+            .active-bit-right
+            a(href="whoWeAre.html").sub-nav-text Who We Are
+                 
+          .sub-nav-box
+            a(href="team.html").sub-nav-text Team
+          .sub-nav-box
+            a(href="testimonials.html").sub-nav-text Testimonials
+          
+      //value
+      section.who-section
+        p.sec-head.mobile-margin Value
+        .specializing
+          .left-col
+            .slide-specializing
+              h5 Specializing
+              .left-text-with-title We specialize for restaurant and bevarage industry so that we could do everything you need . That contributes to bring consistancy to your brand which gives special experience to your customer.
+              .for-desktop
+                +btn("services.html","See Services")
+          .right-col
+            .row
+              .value-img-1
+                img(src="img/value_img_1.jpg", alt="image of project that they have done")
+            .row
+              .value-text 
+                p We grab the ideas out of your head and slap them onto the chopping block, keeping the ingredients that work and complementing them with a plethora of new ideas to transform your restaurant concept to reality. We advise you on the details and create various materials that come together to create an atmosphere that lends itself to an unforgettable experience for your guests.
+              .value-img-2.push-gutter
+                img(src="img/value_img_2.jpg", alt="image of project that they have done")
+            .row
+              .value-img-3.each-items
+                img(src="img/value_img_3.jpg", alt="image of project that they have done")
+              .value-img-4.push-gutter.each-items
+                img(src="img/value_img_4.jpg", alt="image of project that they have done")
+              .value-img-5.push-gutter.each-items
+                img(src="img/value_img_5.jpg", alt="image of project that they have done")
+            .row
+              .value-img-6.push-1-grid.each-items
+                img(src="img/value_img_6.jpg", alt="image of project that they have done")
+              .value-img-7.push-gutter.each-items
+                img(src="img/value_img_7.jpg", alt="image of project that they have done")
+                
+            .for-mobile
+              +btn("services.html","See Services")
+              
+              
+        .experienced
+          .left-col
+            .slide-experienced
+              h5 Authentic Experience
+              p.left-text-with-title 80% of our new projects come from our customer’s recommenda-tions, because we really know about this industry.
+              .for-desktop
+                +btn("testimonials.html","See Testimonials")
+            
+          .right-col
+            .row
+              .value-img-8.each-items
+                img(src="img/value_img_8.jpg", alt="image of project that they have done")
+              .value-testim.push-1-grid
+                .each-items
+                  p.testim-words “ You can truly rely on their team experience and technical knowledge and always be sure they will implement the best possible solution for the project.”
+                  p.testim-name Vasily Goryunov, Manager
+                  i.testim-place Francesco
+
+            .row.mobile-harriot
+              .harriot-quote.each-items
+                p.harriot-name Harriot,CEO
+                .harriot-words 
+                  p “ I had experienced running a bar for 5 years and I relized that I love designing and creating from zero. 
+                  p Bunch of cool concept of restaurant is being gone, it is just because they have a good sense but they do not know proper way to run their bussiness. It is our job to guide them with relaible strategy from rich experience. 
+                  p Restaurant and bevarage industry give people plesure in routine life. I would like to pour water for this huge desert creating  awesome restaurants and bars. ”
+              .value-img-9.push-gutter.each-items
+                img(src="img/harriot_img.jpg", alt="image of project that they have done")
+            .for-mobile
+              +btn("testimonials.html","See Testimonials")
+      
+      section.who-section.history
+        p.sec-head.mobile-margin History
+        .left-col
+          .slide-history
+            h5 Ambition
+            p.left-text-with-title For over 10 years, We have created various restaurants and bevarage industry in NewYork. Now, We believe that we could give more contribution in east coast in USA.
+            .for-desktop
+              +btn("contact.html","Get in Touch")
+        
+        .right-col
+          .row
+            .history-img-1.each-items
+              img(src="img/history_img_1.jpg", alt="image of project that they have done")
+            .history-img-2.push-gutter.each-items
+              img(src="img/history_img_2.jpg", alt="image of project that they have done")
+          .row
+            .history-text-1.push-1-grid
+              p.each-items We help clients discover who they are, allowing them to create lasting bonds with their customers. Bonds based not only on what you sell, but on how it makes your customers feel. This doesn’t take a huge team or elaborate titles. 
+            .history-img-3.push-gutter.each-items
+              img(src="img/history_img_3.jpg", alt="image of project that they have done")
+              
+          .row.for-mobile.each-items
+            p We help clients discover who they are, allowing them to create lasting bonds with their customers. Bonds based not only on what you sell, but on how it makes your customers feel. This doesn’t take a huge team or elaborate titles. It takes people who aren’t afraid to ask questions, who care enough to listen, and who are committed to excellence. People who aren’t only interested in creating pretty things, but in solving client’s challenges with brains and beauty. 
+              
+          .row
+            .history-img-4.each-items
+              img(src="img/history_img_4.jpg", alt="image of project that they have done")
+            .history-text-2.push-gutter
+              p.each-items It takes people who aren’t afraid to ask questions, who care enough to listen, and who are committed to excellence. People who aren’t only interested in creating pretty things, but in solving client’s challenges with brains and beauty. 
+          .for-mobile 
+            +btn("contact.html","Get in Touch")  
+            
+      include parts/footer
+      
+      
+    script(src="js/jquery-3.2.1.min.js")
+    script(src="js/main.js")
+    
+      

@@ -1,0 +1,24 @@
+@import "0-tools/normalize";
+@import "0-tools/bourbon/bourbon";
+@import "0-tools/neat/neat";
+@import "0-tools/media";
+
+
+@import "1-base/color";
+@import "1-base/fonts";
+@import "1-base/base";
+@import "1-base/layout";
+@import "1-base/scroll";
+
+@import "2-modules/button";
+
+@import "3-sections/home";
+@import "3-sections/header";
+@import "3-sections/footer";
+@import "3-sections/services";
+@import "3-sections/whoWeAre";
+@import "3-sections/projects";
+@import "3-sections/team";
+@import "3-sections/contact";
+@import "3-sections/testimonials";
+@import "3-sections/detail";

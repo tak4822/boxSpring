@@ -1,0 +1,192 @@
+//==============================
+//         contact
+//==============================
+.contact-sec
+  +clearfix
+  @media (max-width: $lg-width)
+    &:first-child
+      margin-bottom: 50px
+  .contact-row
+    @media (max-width: $lg-width)
+      flex-wrap: wrap
+
+.contact-left
+  @include grid-column(1)
+  @media (max-width: $lg-width)
+    @include grid-column(3)
+    +grid-push(1)
+    @media (max-width: $sm-width)
+      @include grid-column(4)
+
+.contact-left-for-sm
+  @media (max-width: $lg-width)
+    margin-top: -50px
+    margin-bottom: 100px
+    @media (max-width: $sm-width)
+      margin-bottom: 50px
+
+.contact-quote
+  @include grid-column(2)
+  @media (max-width: $lg-width)
+    @include grid-column(3)
+    @media (max-width: $sm-width)
+      @include grid-column(4)
+      padding: 0
+  padding: 0 32px
+  box-sizing: border-box
+
+  .quote-title
+    margin-bottom: 40px
+    @media (max-width: $phone-width)
+      margin-bottom: 20px
+
+  .contact-input-half-wrap
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    .contact-input-half
+      width: 100%
+      display: inline-block
+      &:nth-child(2)
+        margin-left: 16px
+
+      .check-wrap
+        margin-top: 8px
+        line-height: 1.3rem
+        .contact-check
+          display: none
+
+        .check-label
+          position: relative
+          margin-left: 22px
+          &::before
+            content: ""
+            display: block
+            position: absolute
+            top: 50%
+            margin-top: -6px
+            left: -22px
+            width: 12px
+            height: 12px
+            border: 1px solid $text-color
+
+        .contact-check:checked + .check-label
+          color: $primary-color
+          opacity: 0.9
+          &::before
+            border: 1px solid $primary-color
+          &::after
+            content: ""
+            display: block
+            position: absolute
+            top: -3px
+            left: -19px
+            width: 7px
+            height: 14px
+            transform: rotate(40deg)
+            border-bottom: 3px solid $primary-color
+            border-right: 3px solid $primary-color
+
+  .contact-field
+    width: 100%
+    margin-bottom: 40px
+    @media (max-width: $phone-width)
+      margin-bottom: 30px
+
+    .select-wrap
+      width: 100%!important
+      position: relative
+      &::after
+        display: block
+        content: " "
+        position: absolute
+        top: 50%
+        right: 20px
+        width: 20px
+        height: 20px
+        margin-top: -6px
+        background:
+          image: url(../img/r-triangle.svg)
+          size: contain
+          repeat: no-repeat
+        pointer-events: none
+
+      .select-box
+        appearance: none!important
+        width: 100%
+        padding-left: 10px
+        border-radius: 0
+        background: white
+        color: $text-color
+        text-indent: 10px
+
+    .timeline-wrap
+      position: relative
+      &::after
+        display: block
+        content: " "
+        position: absolute
+        top: 50%
+        right: 5px
+        width: 36px
+        height: 36px
+        margin-top: -18px
+        background:
+          image: url(../img/calender.svg)
+          size: contain
+          repeat: no-repeat
+        pointer-events: none
+
+      .timeline
+        color: $text-color
+
+    .contact-input
+      display: block
+      width: 100%
+      height: 3rem
+      border: 1px solid $text-color
+      text-indent: 20px
+      padding-top: 3px
+      color: $head-color
+
+    .timeline
+      text-indent: 20px
+      @media (max-width: $sm-width)
+        text-indent: 10px
+
+    .message
+      max-width: 100%
+      height: 200px
+      padding-top: 20px
+
+  .contact-btn
+    width: 100%
+    .btn-wrap
+      width: 100%
+    .coontact-submit
+      appearance: none
+
+//contact-right
+.contact-right
+  @include grid-column(1)
+
+  .contact-right-tel
+    margin-bottom: 50px
+
+
+//address section
+.address-map
+  @include grid-column(2)
+  @media (max-width: $lg-width)
+    @include grid-column(3)
+    @media (max-width: $sm-width)
+      @include grid-column(4)
+  #google-map
+    width: 100%
+    height: 500px
+    background: pink
+    @media (max-width: $sm-width)
+      height: 300px
+
+.address-right
+  @include grid-column(1)

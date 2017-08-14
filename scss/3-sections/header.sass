@@ -1,0 +1,177 @@
+//==============================
+//          header
+//==============================
+header
+  height: 100px
+  width: 100%
+  display: flex
+  flex-wrap: nowrap
+  justify-content: space-between
+  align-items: center
+  z-index: 99
+  background: white
+
+  .logo
+    width: 250px
+    height: 80px
+    display: flex
+    align-items: center
+    margin-left: 6px
+
+  .desktop-nav
+    @media (max-width: $lg-width)
+      display: none
+
+    .nav
+      margin-right: 16px
+
+      .nav-li
+        display: inline-block
+        margin-left: 40px
+        &:last-child
+          margin-left: 100px
+
+        //toggler nav
+        .nav-toggle-wrap
+          position: relative
+          .nav-toggle
+            position: absolute
+            top: 50px
+            top: 3vw
+            display: none
+            z-index: 20
+
+            .nav-each
+              display: flex
+              align-items: center
+
+              &:before
+                content: " "
+                width: 5px
+                height: 5px
+                background: $head-color
+                display: inline-block
+                margin-right: 10px
+
+
+        .nav-each
+          color: $head-color
+          text-decoration: none
+
+          &:hover
+            color: $section-color
+
+  .side-nav
+    display: none
+    position: fixed
+    top: 0
+    right: 0
+    width: 80%
+    height: 100%
+    padding-top: 100px
+    text-align: center
+    background: white
+    z-index: 1
+
+    .nav
+      list-style: none
+      .nav-li
+        margin-bottom: 80px
+
+        &:last-child
+          margin-top: 200px
+
+        .nav-each
+          font-size: 3rem
+
+
+
+
+    @media (max-width: $sm-width)
+      .nav
+        padding-left: 0
+        .nav-li
+          margin-bottom: 20px
+
+          &:last-child
+            margin-top: 60px
+
+          .nav-each
+            font-size: 1.2rem
+
+  .side-menu-btn
+    display: none
+    position: absolute
+    top: 24px
+    right: 24px
+    width: 32px
+    height: 28px
+    padding: 5px
+    cursor: pointer
+    z-index: 4
+
+    &:hover
+      .top
+        transform: translateY(-2px)
+      .bottom
+        transform: translateY(2px)
+
+    @media (max-width: $lg-width)
+      display: block
+
+    .threee-bar
+      position: relative
+      display: block
+      cursor: pointer
+      width: 32px
+      height: 28px
+
+      .bar
+        position: absolute
+        left: 0
+        right: 0
+        display: block
+        width: 100%
+        height: 5px
+        margin: auto
+        background: $head-color
+        transition: all .3s ease
+
+      .top
+        top: 0
+
+      .mid
+        top: 0
+        bottom: 0
+
+      .bottom
+        bottom: 0
+
+.side-open
+  .overlay
+    visibility: visible
+    cursor: pointer
+    background: rgba(0,0,0,.7)
+
+  .overlay,.wrapper
+    transform: translateX(-80%)
+
+  header
+    .side-nav
+      display: block
+    .side-menu-btn
+      position: fixed
+      .top,.bottom
+        width: 36px
+        height: 4px
+
+      .top
+        transform-origin: left top
+        transform: rotate(45deg)
+
+      .mid
+        opacity: 0
+
+      .bottom
+        transform-origin: left bottom
+        transform: rotate(-45deg)

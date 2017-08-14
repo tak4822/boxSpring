@@ -1,0 +1,77 @@
+include  parts/btn
+doctype html
+html(lang="en")
+  head
+    title BoxSpring
+    meta(charset="utf-8")
+    meta(name="viewport", content="with=device--width, initial-scale=1")
+    
+    //font from TypeKit
+    script(src="https://use.typekit.net/czx4kof.js")
+    script try{Typekit.load({ async: true });}catch(e){}
+    
+    //google fonts
+    link(href="https://fonts.googleapis.com/css?family=Slabo+13px", rel="stylesheet")
+    
+    link(rel="stylesheet", href="css/main.css")
+    
+  body
+    .overlay
+    include parts/header
+    .wrapper
+      .row.detail-title-wrap
+        h3.detail-h3 Detail
+        p.detail-title Edmund oast
+      .row
+        .detail-hero
+          img(src="img/edmund_hero.jpg",alt="featured image in detail page")
+      .row
+        p.detail-head Brought a story into details so that customers could taste experience.
+      
+      section.detail-sec.detail-rotate-sec-1
+        .left-col
+          .detail-slide-sec-1
+            p.detail-section-head Section1
+            p.detail-section-left-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet enim ac lectus placerat vulputate. Sed ipsum ante, aliquet ut placerat vitae, tincidunt vel dui. 
+        .right-col
+          .row
+            .detail-img-1.each-items
+              img(src="img/edmund_1.jpg", alt="image of project that they have done")
+          .row
+            p.detail-1-text.top-space-mobile.each-items Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet enim ac lectus placerat vulputate. Sed ipsum ante, aliquet ut placerat vitae, tincidunt vel dui. Mauris sodales risus eu felis egestas dignissim. Suspendisse mollis ipsum nec rhoncus placerat. Suspendisse mollis ipsum nec rhoncus placerat. 
+            
+            .detail-img-2.push-gutter.each-items.for-desktop
+              img(src="img/edmund_2.jpg", alt="image of project that they have done")
+          .row
+            .detail-img-3.push-1-grid.each-items.for-desktop
+              img(src="img/edmund_3.jpg", alt="image of project that they have done")
+        
+      section.detail-sec.detail-rotate-sec-2
+        .left-col
+          .detail-slide-sec-2
+            p.detail-section-head Section2
+            p.detail-section-left-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet enim ac lectus placerat vulputate. Sed ipsum ante, aliquet ut placerat vitae, tincidunt vel dui. 
+        .right-col
+          .row.align-flex-end
+            .detail-img-4.each-items.align-flex-end
+              img(src="img/edmund_4.jpg", alt="image of project that they have done")
+            .detail-img-5.push-gutter.each-items.align-flex-end.for-desktop
+              img(src="img/edmund_5.jpg", alt="image of project that they have done")
+          
+          .row.flex-column-mobile
+            p.detail-2-text.top-space-mobile.each-items Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet enim ac lectus placerat vulputate. Sed ipsum ante, aliquet ut placerat vitae, tincidunt vel dui. Mauris sodales risus eu felis egestas dignissim. 
+            
+            .detail-img-6.push-gutter.top-space-mobile.each-items
+              img(src="img/edmund_6.jpg", alt="image of project that they have done")
+          .row
+            .detail-img-7.each-items.for-desktop
+              img(src="img/edmund_7.jpg", alt="image of project that they have done")
+            p.detail-2-text-2.push-gutter.each-items Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet enim ac lectus placerat vulputate. Suspendisse mollis ipsum nec rhoncus placerat. Suspendisse mollis ipsum nec rhoncus placerat. 
+          .row
+            .detail-btn      
+              +btn("contact.html","Get Free Quote")
+            
+      include parts/footer
+      
+    script(src="http://code.jquery.com/jquery-3.2.1.min.js",integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=",crossorigin="anonymous")
+    script(src="js/main.js")

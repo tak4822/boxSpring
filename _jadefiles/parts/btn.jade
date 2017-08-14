@@ -1,0 +1,14 @@
+mixin btn(btnHref,btnText)
+  a(href=btnHref).btn-wrap
+    .btn.default-btn
+      .bit.left-up
+      .bit.right-up
+      .bit.right-bottom
+      .bit.left-bottom
+      .btn-text.default-btn-text #{btnText}
+    .btn.active-btn
+      .bit.left-up
+      .bit.right-up
+      .bit.right-bottom
+      .bit.left-bottom
+      .btn-text.active-btn-text #{btnText}

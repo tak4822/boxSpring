@@ -1,0 +1,129 @@
+include  parts/btn
+doctype html
+html(lang="en")
+  head
+    title Services.BoxSpring
+    meta(charset="utf-8")
+    meta(name="viewport", content="with=device--width, initial-scale=1")
+    
+    //font from TypeKit
+    script(src="https://use.typekit.net/czx4kof.js")
+    script try{Typekit.load({ async: true });}catch(e){}
+    
+    //google fonts
+    link(href="https://fonts.googleapis.com/css?family=Slabo+13px", rel="stylesheet")
+    
+    link(rel="stylesheet", href="css/main.css")
+    
+  body
+    .overlay
+    include parts/header
+    .wrapper
+      .row
+        h3 Services
+      //branding
+      section.services-section.brand
+      
+        .left-col
+          .slide-brand
+            h5 Brand Strategy
+            p.left-text-with-title Box Spring is about Building brands. It’s all we do.
+            
+            .for-desktop
+              +btn("#","See a example")
+        .right-col
+          .row.align-flex-end
+            .brand-video.align-flex-end.each-items
+              iframe(src="https://www.youtube.com/embed/GJjN5PBuiNI?ecver=1", frameborder="0", allowfullscreen).video
+                
+            .brand-img-1.push-gutter.align-flex-end.each-items
+              img(src="img/brand_img_1.jpg", alt="image of project that they have done")
+          .row
+            p.brand-text.push-1-grid.each-items At Box Spring, our branding strategists, designers, writers, and web developers thrive on the open exchange of creative ideas. We are one team. We all join in, share insights, get bold, get uncomfortable, lead, take responsibility, and celebrate success with our clients. Memorable brands are born from the right dose of creativity, personalization, innovation, and passion – and our assembly of experts are just that.
+            
+          .for-mobile
+            +btn("#","See a example")
+      
+      //web design & developement
+      section.services-section.web
+        .left-col
+          .slide-web
+            h5 Web Design & Development
+            p.left-text-with-title Box Spring makes it easy to showcase and update your restaurant’s most important information everywhere local consumers are making decisions online. 
+            
+            .for-desktop
+              +btn("#","See a example")
+        .right-col
+          .row
+            .web-img-1.each-items
+              img(src="img/web_img_1.jpg", alt="image of project that they have done")
+          .row
+            .web-text.each-items 
+              p Box Spring designs websites that enable clients to establish their brand presence online while making use of the latest tools and technologies to ensure their website delivers results.
+              p We develop cutting-edge sites powered by the latest content management systems and services, enabling clients to manage their own website content.
+            .web-img-2.each-items
+              img(src="img/web_img_2.jpg", alt="image of project that they have done")
+          .for-mobile
+            +btn("#","See a example")
+              
+              
+      //graphic design
+      section.services-section.graphic
+        .left-col
+          .slide-graphic
+            h5 Graphic Design
+            p.left-text-with-title  We help you create a brand identity for your  restaurant that not only attracts customers but also keeps them coming back for more.
+            .for-desktop
+              +btn("#","See a example")
+        
+        .right-col
+          .row
+            .graphic-img-1.push-1-grid.each-items
+              img(src="img/graphic_img_1.jpg", alt="image of project that they have done")
+            .graphic-img-2.push-gutter.each-items
+              img(src="img/graphic_img_2.jpg", alt="image of project that they have done")
+          .row.align-flex-end
+            .graphic-img-3.each-items
+              img(src="img/graphic_img_3.jpg", alt="image of project that they have done")
+            .graphic-img-4.push-gutter.each-items
+              img(src="img/graphic_img_4.jpg", alt="image of project that they have done")
+          .row.for-desktop
+            p.graphic-text.each-items As popular as interactive media has become, print still has a sense of permanence and legitimacy that digital communications struggle to match. 
+            p.graphic-text.push-gutter.each-items From business cards and stationery to brochures, book covers, and trade show displays, we design print materials and marketing collateral that make a lasting impression.
+          
+          .row.for-mobile
+            p.graphic-text.each-items As popular as interactive media has become, print still has a sense of permanence and legitimacy that digital communications struggle to match. From business cards and stationery to brochures, book covers, and trade show displays, we design print materials and marketing collateral that make a lasting impression.
+            
+          .for-mobile
+            +btn("#","See a example")
+            
+      //Interior design
+      section.services-section.interior
+        .left-col
+          .slide-interior
+            h5 Interior Design
+            p.left-text-with-title We believe every element of a restaurant or beverage brand experience should be created by design.
+            .for-desktop
+              +btn("#","See a example")
+          
+        .right-col
+          .row.align-flex-end
+            .interior-middle
+              .interior-img-1
+                img(src="img/interior_img_1.jpg", alt="image of project that they have done").each-items
+              p.interior-text.each-items Above form and function is brand, and the brand should dictate everything. When designed with this mentality, the interior space becomes an immersive, unforget-table experience. From restaura-nts to bars, craft beer breweries to distilleries and wineries, our team knows how to thread the brand strategy throughout an interior space.
+            .interior-img-2.push-gutter
+              img(src="img/interior_img_2.jpg", alt="image of project that they have done").each-items
+          
+          .for-mobile
+            +btn("#","See a example")
+      
+        
+      
+      include parts/footer
+      
+    
+    script(src="js/jquery-3.2.1.min.js")
+    script(src="js/main.js")
+    
+      
